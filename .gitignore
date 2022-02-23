@@ -1,0 +1,6 @@
+.venv/
+browser/
+log.html
+report.html
+output.xml
+playwright-log.txt
