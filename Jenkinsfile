@@ -1,17 +1,21 @@
 pipeline {
-   agent { docker { image 'mcr.microsoft.com/playwright:focal' } }
+    agent any
 
-    triggers {
-        githubPush()
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-
-   stages {
-      stage('e2e-tests') {
-         steps {
-            sh 'echo test'
-            sh 'npm install'
-            sh 'npm run test'
-         }
-      }
-   }
 }
