@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://mcr.microsoft.com/playwright:focal
     steps:
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      # - name: List files in the repository
+        # run: |
+          # ls ${{ github.workspace }}
       - run: python --version
       - run: pip --version
       - run: node -v
