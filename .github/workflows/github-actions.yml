@@ -3,11 +3,11 @@ on: [push]
 jobs:
   Robot-Playwright-On-Pipeline:
     runs-on: ubuntu-latest
-    container: docker://mcr.microsoft.com/playwright:focal
+    container: docker://node:latest
     steps:
-      # - name: List files in the repository
-        # run: |
-          # ls ${{ github.workspace }}
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       - run: python --version
       - run: pip --version
       - run: node -v
