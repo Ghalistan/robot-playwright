@@ -12,4 +12,6 @@ jobs:
       - run: pip --version
       - run: node -v
       - run: npm -v
+      - run: python install -r requirements.txt
+      - run: rfbrowser init
       - run: robot -v HEADLESS:True test_cases/
