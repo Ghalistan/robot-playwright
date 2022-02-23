@@ -1,8 +1,9 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Robot-Playwright-On-Pipeline:
     runs-on: ubuntu-latest
+    container: gghalistan/robot-playwright:1.0.0
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -15,3 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: python --version
+      - run: pip --version
+      - run: node -v
+      - run: npm -v
